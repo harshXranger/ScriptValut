@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+
+  --color-ink-950: #0d0f12;
+  --color-ink-900: #14171c;
+  --color-ink-800: #1b1f26;
+  --color-ink-700: #262b34;
+  --color-ink-600: #3a4150;
+  --color-ink-400: #6b7280;
+  --color-ink-200: #d6d9de;
+  --color-ink-100: #eceef1;
+  --color-ink-50: #f7f7f5;
+
+  --color-amber-accent: #d97a3f;
+  --color-amber-accent-dark: #e8975f;
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-ink-50);
+  color: var(--color-ink-900);
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.dark body { background-color: var(--color-ink-950); color: var(--color-ink-100); }
+
+::selection { background: var(--color-amber-accent); color: white; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-ink-200); border-radius: 999px; }
+.dark ::-webkit-scrollbar-thumb { background: var(--color-ink-700); }
+
+.font-display { font-family: var(--font-display); }
+.font-mono { font-family: var(--font-mono); }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fade-up .4s cubic-bezier(.22,1,.36,1) both; }
+
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-pop-in { animation: pop-in .25s cubic-bezier(.22,1,.36,1) both; }
+
+/* Screenplay page styling */
+.script-page {
+  font-family: var(--font-mono);
+  font-size: 12pt;
+  line-height: 1.5;
+  max-width: 8.5in;
+  min-height: 11in;
+  padding: 1in 1in 1in 1.5in;
+  background: white;
+  color: #111;
+}
+.dark .script-page { background: #1b1f26; color: #eceef1; }
+
+[contenteditable]:focus { outline: none; }
+[contenteditable] .scene-heading { font-weight: 700; text-transform: uppercase; margin-top: 1.5em; }
+[contenteditable] .character { text-transform: uppercase; margin-left: 2in; margin-top: 1em; }
+[contenteditable] .dialogue { margin-left: 1in; margin-right: 1.5in; }
+[contenteditable] .parenthetical { margin-left: 1.5in; font-style: italic; }
+[contenteditable] .action { margin-top: 1em; }
+[contenteditable] .transition { text-align: right; text-transform: uppercase; margin-top: 1em; }
