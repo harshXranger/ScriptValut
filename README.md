@@ -77,3 +77,4 @@ The `services/` layer is split by concern (`authService`, `scriptStore`, `pdfExp
 - Auth is local-only (no server, no hashing) — intended as a UI/UX-complete demo layer.
 - The editor is a hand-built contentEditable component rather than a rich-text library, because screenplay formatting (scene headings, character cues, dialogue indents) needed custom block types that general-purpose editors don't model well.
 - PDF export parses the screenplay's HTML block types directly into jsPDF text blocks with standard margins (1.5in left / 1in others, 12pt Courier) rather than rasterizing the page, so exported PDFs stay text-selectable and properly paginated.
+"# ScriptValut" 
