@@ -1,107 +1,77 @@
 import { openDB } from 'idb'
 
 const DB_NAME = 'scriptvault-db'
-const DB_VERSION = 1
-const STORE = 'scripts'
+const DB_VER  = 1
+const STORE   = 'scripts'
 
-let dbPromise = null
-
+let _db = null
 function getDB() {
-  if (!dbPromise) {
-    dbPromise = openDB(DB_NAME, DB_VERSION, {
+  if (!_db) {
+    _db = openDB(DB_NAME, DB_VER, {
       upgrade(db) {
         if (!db.objectStoreNames.contains(STORE)) {
-          const store = db.createObjectStore(STORE, { keyPath: 'id' })
-          store.createIndex('updatedAt', 'updatedAt')
-          store.createIndex('userId', 'userId')
+          const s = db.createObjectStore(STORE, { keyPath: 'id' })
+          s.createIndex('userId',    'userId')
+          s.createIndex('updatedAt', 'updatedAt')
         }
       },
     })
   }
-  return dbPromise
+  return _db
 }
 
 export const scriptStore = {
   async getAll(userId) {
-    const db = await getDB()
+    const db  = await getDB()
     const all = await db.getAll(STORE)
-    return all
-      .filter((s) => s.userId === userId)
-      .sort((a, b) => b.updatedAt - a.updatedAt)
+    return all.filter(s => s.userId === userId).sort((a, b) => b.updatedAt - a.updatedAt)
   },
-
-  async get(id) {
-    const db = await getDB()
-    return db.get(STORE, id)
-  },
+  async get(id) { return (await getDB()).get(STORE, id) },
 
   async save(script) {
-    const db = await getDB()
-    const toSave = { ...script, updatedAt: Date.now() }
-    await db.put(STORE, toSave)
-    // mirror lightweight metadata to localStorage for instant dashboard reads / crash recovery
+    const db   = await getDB()
+    const item = { ...script, updatedAt: Date.now() }
+    await db.put(STORE, item)
+    // Mirror lightweight meta for fast dashboard reads
     try {
-      const meta = JSON.parse(localStorage.getItem('scriptvault:meta') || '{}')
-      meta[toSave.id] = {
-        id: toSave.id,
-        title: toSave.title,
-        updatedAt: toSave.updatedAt,
-        userId: toSave.userId,
-      }
-      localStorage.setItem('scriptvault:meta', JSON.stringify(meta))
-    } catch (e) {
-      console.warn('localStorage mirror failed', e)
-    }
-    return toSave
+      const meta = JSON.parse(localStorage.getItem('sv:meta') || '{}')
+      meta[item.id] = { id: item.id, title: item.title, updatedAt: item.updatedAt, userId: item.userId }
+      localStorage.setItem('sv:meta', JSON.stringify(meta))
+    } catch {}
+    return item
   },
 
   async remove(id) {
-    const db = await getDB()
-    await db.delete(STORE, id)
+    await (await getDB()).delete(STORE, id)
     try {
-      const meta = JSON.parse(localStorage.getItem('scriptvault:meta') || '{}')
+      const meta = JSON.parse(localStorage.getItem('sv:meta') || '{}')
       delete meta[id]
-      localStorage.setItem('scriptvault:meta', JSON.stringify(meta))
-    } catch (e) {
-      console.warn('localStorage cleanup failed', e)
-    }
+      localStorage.setItem('sv:meta', JSON.stringify(meta))
+    } catch {}
+    localStorage.removeItem(`sv:draft:${id}`)
   },
 
-  // unsaved draft recovery (debounced raw content, written synchronously to localStorage)
+  // Instant localStorage draft (survives hard-refresh before IndexedDB save fires)
   saveDraft(id, content) {
-    try {
-      localStorage.setItem(`scriptvault:draft:${id}`, JSON.stringify({ content, savedAt: Date.now() }))
-    } catch (e) {
-      console.warn('draft save failed', e)
-    }
+    try { localStorage.setItem(`sv:draft:${id}`, JSON.stringify({ content, savedAt: Date.now() })) } catch {}
   },
-
   getDraft(id) {
-    try {
-      const raw = localStorage.getItem(`scriptvault:draft:${id}`)
-      return raw ? JSON.parse(raw) : null
-    } catch {
-      return null
-    }
+    try { return JSON.parse(localStorage.getItem(`sv:draft:${id}`) || 'null') } catch { return null }
   },
-
-  clearDraft(id) {
-    localStorage.removeItem(`scriptvault:draft:${id}`)
-  },
+  clearDraft(id) { localStorage.removeItem(`sv:draft:${id}`) },
 }
 
 export function createEmptyScript(userId, overrides = {}) {
-  const id = crypto.randomUUID()
   const now = Date.now()
   return {
-    id,
+    id:        crypto.randomUUID(),
     userId,
-    title: 'Untitled Script',
-    content: '<div class="scene-heading">INT. LOCATION - DAY</div><div class="action">Start writing your story here...</div>',
-    folder: 'Uncategorized',
-    tags: [],
-    favorite: false,
-    archived: false,
+    title:     'Untitled Script',
+    content:   '<div class="scene-heading">INT. LOCATION - DAY</div><div class="action">Start writing your story here...</div>',
+    folder:    'Uncategorized',
+    tags:      [],
+    favorite:  false,
+    archived:  false,
     createdAt: now,
     updatedAt: now,
     ...overrides,

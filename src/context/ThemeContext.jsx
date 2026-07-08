@@ -1,34 +1,18 @@
-import { createContext, useContext, useEffect, useState, useCallback } from 'react'
+import { createContext, useCallback, useContext, useEffect, useState } from 'react'
 
-const ThemeContext = createContext(null)
+const ThemeCtx = createContext(null)
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
-    const stored = localStorage.getItem('scriptvault:theme')
-    if (stored) return stored
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    const stored = localStorage.getItem('sv:theme')
+    return stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
   })
-
   useEffect(() => {
-    const root = document.documentElement
-    if (theme === 'dark') root.classList.add('dark')
-    else root.classList.remove('dark')
-    localStorage.setItem('scriptvault:theme', theme)
+    document.documentElement.classList.toggle('dark', theme === 'dark')
+    localStorage.setItem('sv:theme', theme)
   }, [theme])
-
-  const toggleTheme = useCallback(() => {
-    setTheme((t) => (t === 'dark' ? 'light' : 'dark'))
-  }, [])
-
-  return (
-    <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  )
+  const toggleTheme = useCallback(() => setTheme(t => t === 'dark' ? 'light' : 'dark'), [])
+  return <ThemeCtx.Provider value={{ theme, setTheme, toggleTheme }}>{children}</ThemeCtx.Provider>
 }
 
-export function useTheme() {
-  const ctx = useContext(ThemeContext)
-  if (!ctx) throw new Error('useTheme must be used within ThemeProvider')
-  return ctx
-}
+export const useTheme = () => { const c = useContext(ThemeCtx); if (!c) throw new Error('useTheme outside provider'); return c }

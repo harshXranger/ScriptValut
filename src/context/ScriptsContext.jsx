@@ -1,8 +1,8 @@
-import { createContext, useContext, useEffect, useState, useCallback } from 'react'
+import { createContext, useCallback, useContext, useEffect, useState } from 'react'
 import { scriptStore, createEmptyScript } from '../services/scriptStore'
 import { useAuth } from './AuthContext'
 
-const ScriptsContext = createContext(null)
+const ScriptsCtx = createContext(null)
 
 export function ScriptsProvider({ children }) {
   const { user } = useAuth()
@@ -10,33 +10,26 @@ export function ScriptsProvider({ children }) {
   const [loading, setLoading] = useState(true)
 
   const refresh = useCallback(async () => {
-    if (!user) {
-      setScripts([])
-      setLoading(false)
-      return
-    }
+    if (!user) { setScripts([]); setLoading(false); return }
     setLoading(true)
-    const all = await scriptStore.getAll(user.id)
-    setScripts(all)
+    setScripts(await scriptStore.getAll(user.id))
     setLoading(false)
   }, [user])
 
-  useEffect(() => {
-    refresh()
-  }, [refresh])
+  useEffect(() => { refresh() }, [refresh])
 
   const createScript = useCallback(async (overrides) => {
-    const script = createEmptyScript(user.id, overrides)
-    await scriptStore.save(script)
+    const s = createEmptyScript(user.id, overrides)
+    await scriptStore.save(s)
     await refresh()
-    return script
+    return s
   }, [user, refresh])
 
   const updateScript = useCallback(async (script) => {
     const saved = await scriptStore.save(script)
-    setScripts((prev) => {
-      const exists = prev.some((s) => s.id === saved.id)
-      const next = exists ? prev.map((s) => (s.id === saved.id ? saved : s)) : [saved, ...prev]
+    setScripts(prev => {
+      const exists = prev.some(s => s.id === saved.id)
+      const next   = exists ? prev.map(s => s.id === saved.id ? saved : s) : [saved, ...prev]
       return [...next].sort((a, b) => b.updatedAt - a.updatedAt)
     })
     return saved
@@ -44,36 +37,25 @@ export function ScriptsProvider({ children }) {
 
   const deleteScript = useCallback(async (id) => {
     await scriptStore.remove(id)
-    setScripts((prev) => prev.filter((s) => s.id !== id))
+    setScripts(prev => prev.filter(s => s.id !== id))
   }, [])
 
   const duplicateScript = useCallback(async (id) => {
-    const original = scripts.find((s) => s.id === id)
-    if (!original) return
-    const copy = createEmptyScript(user.id, {
-      ...original,
-      id: crypto.randomUUID(),
-      title: `${original.title} (Copy)`,
-      createdAt: Date.now(),
-    })
+    const orig = scripts.find(s => s.id === id)
+    if (!orig) return
+    const copy = createEmptyScript(user.id, { ...orig, id: crypto.randomUUID(), title: `${orig.title} (Copy)`, createdAt: Date.now() })
     await scriptStore.save(copy)
     await refresh()
     return copy
   }, [scripts, user, refresh])
 
-  const getScript = useCallback((id) => scriptStore.get(id), [])
+  const getScript = useCallback(id => scriptStore.get(id), [])
 
   return (
-    <ScriptsContext.Provider
-      value={{ scripts, loading, refresh, createScript, updateScript, deleteScript, duplicateScript, getScript }}
-    >
+    <ScriptsCtx.Provider value={{ scripts, loading, refresh, createScript, updateScript, deleteScript, duplicateScript, getScript }}>
       {children}
-    </ScriptsContext.Provider>
+    </ScriptsCtx.Provider>
   )
 }
 
-export function useScripts() {
-  const ctx = useContext(ScriptsContext)
-  if (!ctx) throw new Error('useScripts must be used within ScriptsProvider')
-  return ctx
-}
+export const useScripts = () => { const c = useContext(ScriptsCtx); if (!c) throw new Error('useScripts outside provider'); return c }
