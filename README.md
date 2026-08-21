@@ -1,697 +1,665 @@
-# Chintaman Farms — Frontend Redesign Documentation
+# AccurTool — Frontend Redesign Documentation
 
 ## Project Overview
 
-Chintaman Farms is an agriculture-focused website designed to present the farm, its products, farming process, quality standards, certifications, and farmer-direct business model in a modern and professional way.
+AccurTool is an industrial and manufacturing-focused website that presents tools, equipment, accessories, and related industrial products.
 
-The main objective of the redesign was to transform the website into a **premium, modern, trustworthy, responsive agricultural brand experience**.
+The main objective of the redesign was to transform the existing website into a **clean, modern, professional and product-focused industrial website**.
 
-### Main Objectives
+The redesign focused on improving:
 
-* Improve the overall visual appearance
-* Create a stronger agricultural brand identity
-* Improve navigation and user experience
-* Present products more effectively
-* Communicate trust and product quality
-* Explain the farm-to-customer journey
-* Make the website fully responsive
-* Create reusable frontend components
-* Maintain consistency across all sections
+* Visual appearance
+* Product presentation
+* Navigation
+* Product discovery
+* Information hierarchy
+* Responsive behavior
+* Reusable frontend components
+* Overall user experience
+
+The primary work was focused on **frontend development and UI/UX implementation**.
 
 ---
 
-# 1. Navbar
+# 1. Existing Website Analysis
 
 ## Objective
 
-The navbar was designed to provide simple navigation while establishing the Chintaman Farms brand identity.
+Before starting the redesign, the existing AccurTool website was studied to understand:
 
-Instead of creating a traditional agricultural website header, the goal was to create a clean and premium navigation experience.
+* Existing navigation
+* Product categories
+* Product structure
+* Existing page layouts
+* Product information
+* Images and assets
+* Industrial terminology
+* Existing user flow
+
+One of the important pages used for understanding the existing structure was the **Clamp page**.
+
+## What We Identified
+
+The existing website provided useful product information, but the redesign opportunity was to improve:
+
+* Visual hierarchy
+* Product presentation
+* Navigation experience
+* Page spacing
+* Typography
+* Modern UI
+* Responsive behavior
+* Overall consistency
+
+## Approach
+
+Instead of directly copying the existing website, the goal was:
+
+> **Keep the important business and product information while redesigning the user experience and visual presentation.**
+
+---
+
+# 2. Design Direction
+
+## Objective
+
+The first step was to decide how an industrial website should visually communicate:
+
+* Precision
+* Reliability
+* Engineering
+* Professionalism
+* Product quality
+* Technical expertise
+
+The design needed to feel professional without becoming visually complicated.
+
+---
+
+# 3. Initial Dark / Navy Theme
+
+## First Design Direction
+
+Initially, a stronger industrial visual style was explored using:
+
+* Dark backgrounds
+* Navy tones
+* High contrast
+* Large product imagery
+* Strong typography
+* Industrial visual elements
+* High-contrast CTAs
+
+The idea was to create a premium industrial appearance.
+
+## Problem
+
+After reviewing the design, it started to feel:
+
+* Too heavy
+* Too dark
+* Visually dense
+* Less approachable
+* More complicated than necessary
+
+This became an important design iteration.
+
+---
+
+# 4. Simplifying the Design
+
+## Objective
+
+The design was changed from a heavy industrial aesthetic to a simpler and cleaner interface.
 
 ## Changes Made
 
-### Brand / Logo
+Reduced:
 
-* Added the Chintaman Farms brand/logo on the left side.
+* Excessive visual elements
+* Heavy backgrounds
+* Unnecessary decoration
+* Oversized UI elements
+* Excessive contrast
+
+Improved:
+
+* White space
+* Content hierarchy
+* Product visibility
+* Typography
+* Navigation clarity
+* Section spacing
+
+## Design Principle
+
+The new direction followed:
+
+> **Simple + Professional + Product-focused**
+
+Rather than making the website look industrial through excessive dark colors and decoration, the products themselves became the primary visual focus.
+
+---
+
+# 5. White / Light Theme
+
+## Objective
+
+The next major design iteration moved toward a **white/light theme**.
+
+## Why?
+
+A light background provided better visibility for industrial product images and technical information.
+
+It also created a:
+
+* Cleaner appearance
+* More professional B2B feel
+* Better reading experience
+* More spacious layout
+* More modern interface
+
+## Result
+
+The white theme became the stronger direction for the AccurTool redesign.
+
+---
+
+# 6. Navbar
+
+## Objective
+
+The navbar needed to provide access to the company's product categories while keeping the interface simple.
+
+## Changes Made
+
+### Brand
+
+* Added AccurTool branding.
 * Maintained consistent branding throughout the website.
-* Used the primary brand color to connect the navbar with the rest of the design.
+* Positioned the brand clearly within the header.
 
-### Navigation Links
+### Navigation
 
-Created navigation links for the major website sections.
+The navigation was organized around important areas such as:
 
-The navigation was organized so that users could quickly access important information without having to search through the page.
+* Products
+* Categories
+* Company information
+* Contact
+
+The goal was to make product discovery easier.
 
 ### CTA
 
-Added a clear call-to-action button in the navbar.
-
-The CTA was designed to stand out without making the navbar visually heavy.
+A clear CTA was included where appropriate to guide users toward contacting the company or requesting information.
 
 ### Visual Design
 
 The navbar was designed with:
 
 * Clean spacing
-* Minimal visual elements
-* Strong typography
-* Consistent brand colors
-* Subtle borders/background treatment
-* Premium appearance
+* Minimal decoration
+* Clear typography
+* Professional appearance
+* Consistent alignment
+* Light theme
 
-### Responsive Behavior
+## Responsive Behavior
 
-On smaller screens:
+On mobile:
 
 * Desktop navigation links are hidden.
-* A mobile menu/navigation interaction is used.
+* Mobile navigation is displayed.
 * Spacing is reduced.
-* Logo remains clearly visible.
-* CTA/navigation controls remain accessible.
+* Navigation remains easy to access.
 
 ## Result
 
-The navbar provides a clean entry point to the website and establishes the brand identity immediately.
+The navbar provides a simple entry point into the product catalog without overwhelming the user.
 
 ---
 
-# 2. Hero Section
+# 7. Hero Section
 
 ## Objective
 
-The Hero section is the first major visual experience for the user.
-
-The goal was to immediately communicate:
-
-> Chintaman Farms is a premium, trustworthy agricultural brand.
+The Hero section was designed to immediately communicate that AccurTool is an industrial/product-focused company.
 
 ## Changes Made
 
-### Large Hero Typography
+### Heading
 
-Introduced a large headline to create a strong visual hierarchy.
-
-The heading was designed to communicate the core brand message quickly.
+Added a strong heading to communicate the primary value of the company/product category.
 
 ### Supporting Content
 
-Added a short supporting description explaining the company's agricultural approach and farmer-direct philosophy.
-
-### CTA Buttons
-
-Added prominent CTAs to guide users toward important actions.
-
-Examples include:
-
-* Explore Products
-* Learn More
-* Contact / Enquire
-
-### Agricultural Imagery
-
-Used high-quality agricultural imagery to visually communicate:
-
-* Farms
-* Crops
-* Nature
-* Agriculture
-* Product origin
-
-The imagery was treated as an important part of the storytelling instead of simply being decorative.
-
-### Visual Hierarchy
-
-The hero follows a hierarchy:
-
-**Headline → Description → CTA → Visual**
-
-This allows the user to understand the company before exploring the rest of the page.
-
-### Spacing
-
-Improved:
-
-* Top spacing
-* Horizontal padding
-* Heading spacing
-* CTA spacing
-* Image positioning
-
-This created a more premium and less crowded appearance.
-
-## Responsive Behavior
-
-On mobile:
-
-* Hero typography is scaled down.
-* Content becomes vertically stacked.
-* Buttons become easier to tap.
-* Images adapt to the available width.
-* Excessive spacing is reduced.
-
-## Result
-
-The hero creates a strong first impression and immediately communicates the agricultural and premium identity of Chintaman Farms.
-
----
-
-# 3. About / Farm Story
-
-## Objective
-
-The About section was designed to explain who Chintaman Farms is and create a connection between the customer and the farm.
-
-## Changes Made
-
-Instead of using a basic company description, the section was structured around the farm's story.
-
-### Content
-
-The section communicates:
-
-* Farm background
-* Agricultural experience
-* Farmer connection
-* Product origin
-* Farming philosophy
-
-### Layout
-
-Used a combination of:
-
-* Text
-* Agricultural imagery
-* Supporting information
-* Clear typography
-
-The section was designed to avoid presenting a large block of text.
-
-### Storytelling
-
-The information is presented as a story:
-
-**Farm → Farmers → Cultivation → Quality → Customer**
-
-This makes the website more engaging than a traditional corporate "About Us" section.
-
-## Responsive Behavior
-
-Desktop:
-
-* Text and image are arranged side-by-side.
-
-Mobile:
-
-* Content becomes vertically stacked.
-* Text width is reduced for readability.
-* Images scale to the container.
-
-## Result
-
-The section builds an emotional and informational connection between the customer and the farm.
-
----
-
-# 4. Brand / Value Proposition
-
-## Objective
-
-This section explains why customers should choose Chintaman Farms.
-
-The main concept was:
-
-**Farmer → Farm → Product → Customer**
-
-## Changes Made
-
-Created individual value propositions around the company's key strengths.
-
-Examples:
-
-* Farmer-direct sourcing
-* Product traceability
-* Quality-focused farming
-* Fresh agricultural products
-* Direct connection with the farm
-
-### Card Design
-
-Each value proposition can be represented using:
-
-* Icon
-* Heading
-* Short description
-
-The cards were kept visually simple to avoid making the section look cluttered.
-
-### Iconography
-
-Used simple icons to make the information easier to scan.
-
-## Responsive Behavior
-
-On desktop:
-
-* Multiple value cards can appear in a row.
-
-On mobile:
-
-* Cards stack vertically.
-* Spacing is reduced.
-* Text remains readable.
-
-## Result
-
-The section communicates the company's unique selling points quickly.
-
----
-
-# 5. Statistics
-
-## Objective
-
-The statistics section was added to establish credibility.
-
-Instead of asking the user to trust the company only through text, measurable information is displayed visually.
-
-## Changes Made
-
-Created statistics such as:
-
-* Years of experience
-* Number of farmers
-* Products
-* Deliveries
-* Agricultural area / production
-
-### Visual Design
-
-The statistics use:
-
-* Large numbers
-* Smaller labels
-* Strong typography
-* Consistent spacing
-
-The large numbers attract attention while the labels explain what they represent.
-
-### Animation
-
-Where appropriate, subtle animation can be used when statistics enter the viewport.
-
-The animation should remain minimal so that it does not distract from the information.
-
-## Responsive Behavior
-
-Desktop:
-
-Statistics appear horizontally.
-
-Mobile:
-
-Statistics become vertically stacked or arranged in a smaller grid.
-
-## Result
-
-The statistics section increases trust and makes the company appear established and reliable.
-
----
-
-# 6. Products
-
-## Objective
-
-The Products section is one of the most important sections because it allows users to understand what Chintaman Farms actually offers.
-
-## Changes Made
-
-### Product Cards
-
-Created clean product cards containing:
-
-* Product image
-* Product name
-* Short description
-* Supporting information
-* CTA where required
+Added concise supporting information rather than using long paragraphs.
 
 ### Product Imagery
 
-High-quality images are prioritized because agricultural products are highly visual.
+Used industrial product imagery to immediately establish the context.
 
-The images communicate:
+### CTA
 
-* Freshness
-* Natural origin
-* Product quality
-* Agricultural authenticity
+Added an action-oriented CTA to guide users toward:
 
-### Card Design
+* Exploring products
+* Viewing product categories
+* Contacting the company
+* Requesting information
 
-The cards use:
+### Visual Hierarchy
 
-* Consistent dimensions
-* Rounded corners
-* Controlled spacing
+The hero follows:
+
+**Headline → Supporting Information → CTA → Product Visual**
+
+## Result
+
+The hero establishes the industrial identity and gives users a clear starting point.
+
+---
+
+# 8. Product Category Structure
+
+## Objective
+
+AccurTool contains multiple industrial products and categories.
+
+A major challenge was organizing this information so that users could quickly find what they need.
+
+## Changes Made
+
+Products were organized around categories rather than displaying everything together.
+
+The structure allows users to move from:
+
+**Category → Product → Product Details**
+
+## Benefits
+
+This improves:
+
+* Product discovery
+* Navigation
+* Scalability
+* Maintainability
+* User experience
+
+---
+
+# 9. Clamp Page
+
+## Objective
+
+The Clamp page was one of the important pages used during the redesign.
+
+The goal was to create a better product-category experience than the existing page.
+
+## Changes Made
+
+### Page Header
+
+Created a clear page introduction containing:
+
+* Category/product title
+* Supporting description
+* Relevant context
+
+### Product Presentation
+
+Products were displayed using structured product cards.
+
+Each product could contain:
+
+* Product image
+* Product name
+* Product category
+* Short information
+* CTA/details
+
+### Layout
+
+The page was structured so that users could quickly scan multiple products.
+
+## Result
+
+The Clamp page became easier to browse and visually more consistent with the redesigned website.
+
+---
+
+# 10. Product Cards
+
+## Objective
+
+Product cards were created to standardize how industrial products are displayed.
+
+## Changes Made
+
+Each card was designed to contain relevant product information.
+
+Typical structure:
+
+```text
+Product Image
+      ↓
+Product Name
+      ↓
+Short Description
+      ↓
+Product Information
+      ↓
+View / Contact CTA
+```
+
+## Visual Design
+
+Cards were designed with:
+
+* Clean backgrounds
+* Controlled borders
+* Consistent spacing
+* Product-focused imagery
 * Clear typography
-* Image hierarchy
+* Minimal decoration
 
-### Product Organization
+## Hover Interaction
 
-Products are presented in a structured way instead of displaying them randomly.
-
-This makes it easier for users to compare products.
-
-## Responsive Behavior
-
-Desktop:
-
-* Products displayed using a multi-column grid.
-
-Tablet:
-
-* Grid columns reduce.
-
-Mobile:
-
-* Products become a single-column layout.
-
-Images maintain their aspect ratio to prevent distortion.
+Where appropriate, subtle hover states were used to provide feedback when the user interacts with a product card.
 
 ## Result
 
-The product section makes product discovery easier and presents agricultural products in a premium way.
+The product cards provide a consistent way to present multiple products.
 
 ---
 
-# 7. Quality
+# 11. Product Data Structure
 
 ## Objective
 
-The Quality section was created to answer an important customer question:
+Instead of manually writing separate UI code for every product, product information was structured as data.
 
-> "How do I know these products are high quality?"
+## Product Data
 
-## Changes Made
+The structure could contain:
 
-The section communicates the company's focus on:
-
-* Farming quality
-* Product freshness
-* Quality control
-* Proper cultivation
-* Product handling
-
-### Visual Structure
-
-The section uses a combination of:
-
-* Supporting imagery
-* Quality points
-* Icons
-* Short descriptions
-
-Instead of writing long paragraphs, important information is divided into smaller pieces.
-
-## Result
-
-The section helps establish confidence in the company's products.
-
----
-
-# 8. Certifications
-
-## Objective
-
-Certifications provide external evidence that supports the company's quality claims.
-
-## Changes Made
-
-Created a dedicated area to showcase:
-
-* Certifications
-* Standards
-* Quality credentials
-* Relevant documentation
-
-### Visual Presentation
-
-Certification items are displayed clearly so that users can identify them quickly.
-
-The design avoids making certifications look like unrelated images placed on the page.
-
-They are treated as part of the overall trust-building experience.
-
-### Design
-
-Used:
-
-* Clean cards
-* Certification logos
-* Short descriptions
-* Consistent spacing
-
-## Result
-
-The section strengthens credibility and gives customers additional reasons to trust the brand.
-
----
-
-# 9. Lab Reports
-
-## Objective
-
-The Lab Reports section provides more detailed evidence about product quality.
-
-This section is particularly useful for customers who want verification rather than only marketing information.
-
-## Changes Made
-
-Created a dedicated area for:
-
-* Lab reports
-* Test results
-* Quality documentation
-* Product verification
-
-### User Experience
-
-The information is presented in an easy-to-understand format.
-
-Instead of forcing users to read large amounts of information, reports can be organized by:
-
-* Product
-* Report type
-* Date
-* Relevant quality parameter
-
-### Visual Design
-
-The section maintains the same visual language as the rest of the website:
-
-* Clean cards
-* Clear headings
-* Minimal borders
-* Strong typography
-* Consistent spacing
-
-## Result
-
-The Lab Reports section provides transparency and supports the quality claims made elsewhere on the website.
-
----
-
-# 10. Farm / Process Information
-
-## Objective
-
-This section explains what happens before the product reaches the customer.
-
-The purpose is to make the agricultural process understandable.
-
-## Process Structure
-
-The process can be communicated as:
-
-**Cultivation → Harvesting → Quality Check → Processing → Packaging**
-
-Each step contains:
-
-* Step number
-* Title
+* Product name
+* Category
+* Image
 * Description
-* Supporting icon/image
+* Product attributes
+* Additional information
 
-### Visual Design
+## Why This Approach?
 
-A timeline/process layout is used to make the journey easy to understand.
+Using structured product data makes the application:
 
-### Storytelling
+* Easier to maintain
+* Easier to update
+* More reusable
+* More scalable
 
-Instead of simply saying:
-
-> "We provide quality products."
-
-The website shows how quality is achieved.
-
-## Responsive Behavior
-
-Desktop:
-
-Process steps can appear horizontally or along a timeline.
-
-Mobile:
-
-The timeline becomes vertical so users can read each stage sequentially.
-
-## Result
-
-The section improves transparency and helps customers understand the work behind the product.
+For example, the same `ProductCard` component can display different products simply by receiving different data.
 
 ---
 
-# 11. Shipping / Logistics
+# 12. Reusable Product Components
 
 ## Objective
 
-The Logistics section explains how products move from the farm to the customer.
+The product UI was converted into reusable React components.
 
-## Process
+## Example Components
 
-The journey is represented as:
+Possible components included:
 
-**Farm → Quality Check → Packaging → Dispatch → Delivery**
+* `ProductCard`
+* `ProductGrid`
+* `CategoryCard`
+* `ProductSection`
+* `ProductDetails`
+* `CTA`
+* `Navbar`
+* `Footer`
 
-## Changes Made
+## Benefits
 
-Created a clear visual timeline.
+Reusable components reduce:
 
-Each stage contains:
+* Duplicate code
+* Development time
+* Maintenance effort
 
-* Number
-* Icon
-* Title
-* Short explanation
-
-### User Experience
-
-The user can understand the delivery process without reading a large paragraph.
-
-### Visual Design
-
-The section uses:
-
-* Timeline elements
-* Connecting lines
-* Icons
-* Clear typography
-* Consistent spacing
-
-## Responsive Behavior
-
-Desktop:
-
-The process can be shown horizontally.
-
-Mobile:
-
-The timeline changes into a vertical structure.
-
-## Result
-
-The logistics section communicates transparency and gives customers a clearer understanding of how their order reaches them.
+They also make future product additions easier.
 
 ---
 
-# 12. CTA — Call To Action
+# 13. Product Images & Asset Management
 
 ## Objective
 
-The CTA section provides a clear next step after the user has learned about the company and products.
+Industrial products rely heavily on product imagery.
+
+Therefore, managing image assets correctly became an important part of the project.
 
 ## Changes Made
 
-Created a visually stronger CTA section containing:
+Product images were:
 
-* Short headline
-* Supporting text
-* Primary CTA
-* Optional secondary CTA
+* Organized by product/category
+* Imported into the frontend
+* Connected with product data
+* Displayed consistently inside product cards/pages
 
-### CTA Purpose
+## Asset Challenges
 
-Depending on the page flow, users can:
+During development, some image imports were not resolving correctly.
 
-* Explore products
-* Contact the farm
-* Request information
-* Make an enquiry
+Examples included files such as:
 
-### Visual Design
+```text
+amada-punch-1.jpg
+Hydraulic-Press-Brake.webp
+```
 
-The CTA uses stronger contrast than surrounding sections so it becomes visually noticeable.
+The problem required checking:
 
-However, it remains consistent with the overall brand design.
+* File location
+* Import path
+* File name
+* Extension
+* Directory structure
 
-## Result
+## Learning
 
-The CTA converts user interest into an actionable next step.
+This taught the importance of maintaining a clean asset structure and verifying import paths during frontend development.
 
 ---
 
-# 13. Footer
+# 14. Product Detail Page
 
 ## Objective
 
-The footer provides the final navigation and business information.
+The product detail experience needed to provide more information than the product card.
 
 ## Changes Made
 
-The footer was organized into multiple logical groups.
+The product page was structured around the product itself.
 
-### Brand Information
+Important elements included:
 
-* Chintaman Farms logo
-* Short company description
+* Large product image
+* Product name
+* Product description
+* Product specifications
+* Category information
+* Relevant technical details
+* Contact / enquiry CTA
 
-### Navigation
+## Layout
 
-Links to important website sections.
+The primary layout focused on:
 
-### Products
+**Product Image | Product Information**
 
-Important product/category links.
+This allows the user to understand the product quickly.
 
-### Contact
+## Result
 
-* Contact information
-* Email
-* Phone
-* Location
+The product page provides a clearer experience for users who want detailed information before contacting the company.
 
-### Social / External Links
+---
 
-Relevant social or external business links where required.
+# 15. Product Specifications
 
-### Copyright
+## Objective
 
-Added copyright information at the bottom.
+Industrial customers often need technical information before making an enquiry.
+
+## Changes Made
+
+Product information was structured to make technical details easier to scan.
+
+Instead of placing all specifications inside long paragraphs, information can be divided into:
+
+* Specification labels
+* Values
+* Technical attributes
+* Product details
+
+## Result
+
+This improves readability and allows users to find relevant technical information faster.
+
+---
+
+# 16. Company / About Information
+
+## Objective
+
+The website also needs to communicate who AccurTool is beyond its products.
+
+## Changes Made
+
+The company information was presented in a structured manner.
+
+The section focuses on:
+
+* Company identity
+* Industrial expertise
+* Product quality
+* Professional capabilities
+* Business credibility
 
 ## Design
 
-The footer uses a darker background to visually close the website.
+The information was kept concise rather than using large blocks of text.
 
-The contrast separates the footer from the main content.
+---
+
+# 17. Quality / Professional Positioning
+
+## Objective
+
+Industrial customers need confidence that the company can provide reliable products.
+
+## Changes Made
+
+The website design emphasizes:
+
+* Precision
+* Quality
+* Reliability
+* Engineering
+* Professionalism
+
+These qualities are communicated through both the content and visual design.
+
+## Visual Approach
+
+Instead of using excessive decorative elements, credibility is established through:
+
+* Product imagery
+* Technical information
+* Clean layout
+* Structured product presentation
+* Professional typography
+
+---
+
+# 18. CTA / Contact Section
+
+## Objective
+
+The final goal of the industrial website is often to generate an enquiry rather than simply display information.
+
+## Changes Made
+
+A dedicated CTA/contact section was created.
+
+The CTA can guide users toward:
+
+* Contacting AccurTool
+* Requesting product information
+* Asking for specifications
+* Requesting a quotation
+* Making an enquiry
+
+## Visual Design
+
+The CTA uses stronger visual contrast while remaining consistent with the light theme.
+
+## Result
+
+The user has a clear next step after exploring products.
+
+---
+
+# 19. Footer
+
+## Objective
+
+The footer provides the final navigation and company information.
+
+## Changes Made
+
+The footer was organized into logical groups.
+
+### Company
+
+* Company information
+* Brand identity
+
+### Products
+
+* Important product categories
+* Product links
+
+### Navigation
+
+* Main website sections
+
+### Contact
+
+* Phone
+* Email
+* Location
+* Other contact information
+
+### Copyright
+
+Added copyright information.
 
 ## Responsive Behavior
 
-On desktop:
+Desktop:
 
-Information is organized into columns.
+* Content is organized into columns.
 
-On mobile:
+Mobile:
 
-Columns stack vertically.
+* Columns stack vertically.
 
 ## Result
 
@@ -699,13 +667,11 @@ The footer provides users with a final navigation point and important business i
 
 ---
 
-# 14. Responsive Layout
+# 20. Responsive Layout
 
 ## Objective
 
-The entire website was designed to work across different screen sizes.
-
-The major target devices were:
+The AccurTool website needed to work properly across:
 
 * Desktop
 * Laptop
@@ -714,21 +680,17 @@ The major target devices were:
 
 ## Changes Made
 
-### Navigation
+### Navbar
 
-Desktop navigation changes into a mobile-friendly menu.
+Desktop navigation transforms into a mobile-friendly navigation.
 
 ### Hero
 
-Large desktop typography scales down on smaller screens.
-
-### Images
-
-Images use responsive sizing and maintain proper proportions.
+Large headings and images scale according to screen size.
 
 ### Product Grid
 
-The number of columns changes depending on screen width.
+The number of columns changes based on viewport width.
 
 Example:
 
@@ -738,409 +700,516 @@ Example:
 
 **Mobile → 1 column**
 
+### Product Images
+
+Images were made responsive so they don't overflow or become distorted.
+
 ### Typography
 
-Headings and paragraphs are resized to prevent:
+Heading and paragraph sizes were adjusted for smaller screens.
 
-* Overflow
-* Excessive line lengths
-* Poor readability
+### Product Details
+
+Desktop:
+
+```text
+Image | Product Information
+```
+
+Mobile:
+
+```text
+Image
+   ↓
+Product Information
+```
 
 ### Spacing
 
-Desktop spacing is reduced on smaller screens.
-
-### Buttons
-
-Buttons are made easier to tap on mobile.
-
-### Sections
-
-Side-by-side layouts become vertically stacked.
-
-For example:
-
-**Desktop**
-
-`Image | Content`
-
-**Mobile**
-
-`Image`
-
-`Content`
+Large desktop spacing is reduced on smaller screens to keep the interface compact.
 
 ## Testing
 
-Responsive layouts were checked at different viewport sizes to identify:
+Responsive behavior was checked for:
 
 * Overflow
-* Misalignment
-* Incorrect spacing
-* Image distortion
-* Text wrapping problems
-* Navigation issues
+* Product card alignment
+* Image sizing
+* Text wrapping
+* Navigation
+* Button placement
+* Section spacing
 
 ## Result
 
-The website provides a consistent experience across desktop, tablet and mobile devices.
+The website maintains a consistent product-focused experience across different devices.
 
 ---
 
-# 15. Component-Based Development
+# 21. Tailwind CSS Implementation
 
 ## Objective
 
-The website was divided into reusable frontend components rather than keeping everything inside one large page.
+Tailwind CSS was used to implement the visual system efficiently.
 
-## Components
+## Used For
 
-Possible reusable components include:
-
-* `Navbar`
-* `Hero`
-* `About`
-* `ValueCard`
-* `Stats`
-* `ProductCard`
-* `Quality`
-* `CertificationCard`
-* `LabReport`
-* `ProcessTimeline`
-* `Logistics`
-* `CTA`
-* `Footer`
+* Layout
+* Flexbox
+* Grid
+* Padding
+* Margin
+* Typography
+* Colors
+* Borders
+* Border radius
+* Responsive breakpoints
+* Hover states
+* Positioning
 
 ## Benefits
 
-This approach provides:
+Tailwind made it easier to:
+
+* Iterate quickly
+* Maintain consistent spacing
+* Create responsive layouts
+* Modify the design during feedback cycles
+
+---
+
+# 22. Component-Based Architecture
+
+## Objective
+
+The frontend was structured using reusable components rather than placing all UI logic into a single file.
+
+## Main Component Concepts
+
+```text
+Navbar
+Hero
+Category Section
+Product Grid
+Product Card
+Product Details
+Company Section
+CTA
+Footer
+```
+
+## Benefits
+
+This provides:
 
 * Reusability
-* Cleaner code
-* Easier maintenance
+* Better organization
 * Easier debugging
-* Faster UI changes
-* Better project organization
-
-For example, instead of creating separate HTML for every product, a reusable `ProductCard` can receive different product data.
-
----
-
-# 16. Styling System
-
-## Tailwind CSS
-
-Tailwind CSS was used to implement the UI.
-
-It was used for:
-
-* Spacing
-* Typography
-* Colors
-* Flexbox
-* Grid
-* Borders
-* Rounded corners
-* Responsive breakpoints
-* Positioning
-* Hover states
-
-This allowed the design to remain consistent across the entire website.
+* Easier redesign
+* Easier maintenance
+* Scalability
 
 ---
 
-# 17. Color System
+# 23. Vite Development Environment
 
-The Chintaman Farms visual identity was based on an agricultural-inspired palette.
+The AccurTool frontend was developed using a React/Vite environment.
 
-| Purpose       | Color     |
-| ------------- | --------- |
-| Primary       | `#0B4D36` |
-| Secondary     | `#6BA539` |
-| Accent        | `#C9A227` |
-| Background    | `#FAF9F6` |
-| Dark Sections | `#0F2F24` |
+The local development server was configured successfully for frontend development.
 
-### Reasoning
+This provided a fast development workflow for:
 
-Green was selected because it represents:
-
-* Agriculture
-* Nature
-* Growth
-* Freshness
-
-The gold accent was used sparingly to add a premium feeling.
-
-The off-white background prevented the website from feeling overly saturated.
+* Testing UI changes
+* Checking components
+* Debugging imports
+* Testing responsive layouts
+* Iterating on the design
 
 ---
 
-# 18. Typography
+# 24. Asset Import / Module Errors
 
-## Font
+## Problem
 
-**Montserrat**
+During development, some product image imports could not be resolved.
 
-was used as the primary typeface.
+Examples included missing files such as:
 
-### Why?
+```text
+amada-punch-1.jpg
+Hydraulic-Press-Brake.webp
+```
 
-Montserrat provides:
+## Possible Causes
 
-* Modern appearance
-* Strong headings
-* Good readability
-* Professional appearance
-* Consistent visual identity
+* Incorrect relative path
+* Incorrect filename
+* Incorrect extension
+* File located in another directory
+* Case mismatch
 
-Typography hierarchy was created using different:
+## Debugging Process
 
-* Font sizes
-* Font weights
-* Line heights
-* Letter spacing
+The issue required checking:
 
----
+1. Actual asset location
+2. Import statement
+3. Filename
+4. Extension
+5. Directory structure
 
-# 19. Animation & Interaction
+## Learning
 
-Where required, subtle animations were used to improve the experience.
+This reinforced the importance of:
 
-Examples include:
-
-* Section reveal
-* Fade-in
-* Small movement
-* Hover effects
-* Button interactions
-* Image transitions
-
-The goal was not to animate everything.
-
-The animation philosophy was:
-
-> **Subtle interaction rather than excessive animation.**
-
-This keeps the website premium and professional.
+> **Maintaining a predictable project structure and verifying asset paths before importing them.**
 
 ---
 
-# 20. Overall User Journey
+# 25. Route / Component Organization
 
-The complete page was structured around a user journey:
+During development, we also encountered an optimization warning related to exporting components directly from route files.
+
+For example, a component such as:
+
+```text
+PressBrakeToolFilm
+```
+
+was being exported from a route-related file.
+
+## Problem
+
+Route files are intended primarily for route-specific logic.
+
+Exporting reusable components directly from them can interfere with optimization/code-splitting behavior.
+
+## Better Approach
+
+Move reusable components into dedicated component files.
+
+For example:
+
+```text
+components/
+    PressBrakeToolFilm.jsx
+```
+
+and keep the route file focused on the route itself.
+
+## Learning
+
+This helped reinforce the importance of separating:
+
+**Routes → Page-specific logic**
+
+from:
+
+**Components → Reusable UI**
+
+---
+
+# 26. Design Iteration
+
+One of the most important parts of the AccurTool redesign was the iterative design process.
+
+## Version 1 — Dark Industrial
+
+### Direction
+
+* Dark background
+* Navy colors
+* Strong contrast
+* Heavy industrial appearance
+
+### Problem
+
+The interface felt too heavy.
+
+---
+
+## Version 2 — Simplified Industrial
+
+### Changes
+
+* Reduced visual elements
+* Improved spacing
+* Simplified cards
+* Reduced unnecessary decoration
+
+### Result
+
+The interface became cleaner.
+
+---
+
+## Version 3 — White / Light Theme
+
+### Changes
+
+* White backgrounds
+* Cleaner product presentation
+* More whitespace
+* More restrained colors
+* Better readability
+
+### Result
+
+A more professional B2B industrial interface.
+
+---
+
+# 27. Product-Focused Design Philosophy
+
+The most important design decision was:
+
+> **The product should be the primary focus.**
+
+Instead of competing with the products through excessive visual effects, the interface was designed to support them.
+
+This meant:
+
+* Clean backgrounds
+* Strong product images
+* Clear product names
+* Readable specifications
+* Simple CTAs
+* Minimal distractions
+
+---
+
+# 28. Overall User Journey
+
+The website structure was designed around the following flow:
 
 ```text
 Navbar
    ↓
 Hero
    ↓
-About / Farm Story
+Company / Introduction
    ↓
-Brand Values
-   ↓
-Statistics
+Product Categories
    ↓
 Products
    ↓
-Quality
+Product Details
    ↓
-Certifications
+Quality / Professional Information
    ↓
-Lab Reports
-   ↓
-Farm / Process
-   ↓
-Shipping / Logistics
-   ↓
-CTA
+Contact / Enquiry
    ↓
 Footer
 ```
 
-The purpose of this sequence is:
+The main objective is:
 
-**Introduction → Story → Trust → Products → Proof → Process → Conversion**
+**Introduction → Product Discovery → Product Information → Trust → Enquiry**
 
 ---
 
-# 21. Overall Improvements
+# 29. Overall Improvements
 
-Compared with a basic agricultural website, the redesigned experience focused on:
+## Visual Improvements
 
-### Visual Improvements
+* Cleaner layout
+* White/light theme
+* Better typography
+* Improved spacing
+* Better product imagery
+* Consistent card design
+* Stronger visual hierarchy
 
-* Modern typography
-* Better spacing
-* Consistent colors
-* Better imagery
-* Premium cards
-* Strong visual hierarchy
+## UX Improvements
 
-### UX Improvements
-
-* Clear navigation
-* Better content organization
+* Clearer navigation
+* Better category organization
 * Easier product discovery
-* Clear CTAs
-* Structured information
+* Better product information
+* Clearer CTAs
+* Improved responsive behavior
 
-### Technical Improvements
+## Technical Improvements
 
 * Reusable React components
+* Structured product data
 * Tailwind CSS
 * Responsive layouts
-* Structured product data
-* Maintainable frontend architecture
+* Organized asset management
+* Better component separation
 
-### Business Improvements
+## Business Improvements
 
-* Stronger brand identity
-* Better trust communication
+* More professional industrial identity
 * Better product presentation
-* Clearer farm-to-customer story
-* More professional online presence
+* Improved product discovery
+* Stronger B2B communication
+* Clearer enquiry flow
 
 ---
 
-# 22. What I Personally Worked On
+# 30. What I Personally Worked On
 
-My primary responsibility was the **frontend and UI/UX implementation**.
+My primary responsibility was **frontend development and UI/UX implementation**.
 
 My work included:
 
+* Studying the existing AccurTool website
+* Understanding the Clamp page
+* Planning the new UI structure
 * Designing and implementing the navbar
 * Building the hero section
-* Creating content sections
-* Implementing the farm story
-* Creating value proposition sections
-* Building statistics
-* Creating product presentation
-* Implementing quality sections
-* Creating certification areas
-* Designing lab report presentation
-* Creating process/logistics sections
-* Building CTA sections
+* Creating product category layouts
+* Creating product cards
+* Structuring product data
+* Implementing product images
+* Building product detail layouts
+* Creating company/information sections
+* Creating CTA/contact sections
 * Developing the footer
 * Implementing responsive layouts
-* Managing images/assets
+* Using Tailwind CSS for styling
 * Creating reusable components
-* Styling the website using Tailwind CSS
-* Testing the interface
-* Fixing UI and responsive issues
+* Managing frontend assets
+* Debugging missing image imports
+* Fixing layout issues
+* Improving component organization
 * Iterating on the design based on feedback
 
 ---
 
-# 23. Main Challenges
+# 31. Main Challenges
 
-## Challenge 1 — Creating a Premium Agricultural Design
+## Challenge 1 — Finding the Right Visual Direction
 
-The website needed to represent agriculture while still feeling modern and premium.
+The first dark industrial design became visually heavy.
 
 ### Solution
 
-Used:
+The design was simplified and eventually moved toward a white/light theme.
 
-* Natural green colors
-* Clean typography
-* Large imagery
-* Strong whitespace
-* Minimal cards
-* Consistent visual hierarchy
+This improved:
+
+* Readability
+* Product visibility
+* Whitespace
+* Professional appearance
 
 ---
 
-## Challenge 2 — Responsive Design
+## Challenge 2 — Managing Multiple Products
 
-A layout that looked good on desktop did not always work on mobile.
+AccurTool has multiple industrial products and categories.
+
+Creating individual UI structures for every product would make the project difficult to maintain.
 
 ### Solution
 
 Used:
 
-* Tailwind responsive breakpoints
-* Flexible grids
-* Responsive typography
-* Stacked layouts
+* Structured product data
+* Reusable product cards
+* Reusable product sections
+* Category-based organization
+
+---
+
+## Challenge 3 — Product Asset Management
+
+Multiple product images needed to be imported and connected correctly.
+
+### Problem
+
+Some image paths were incorrect or missing.
+
+### Solution
+
+Checked:
+
+* Asset directory
+* File names
+* Extensions
+* Import paths
+* Component references
+
+---
+
+## Challenge 4 — Responsive Product Layouts
+
+Product cards and product details needed to work across multiple screen sizes.
+
+### Solution
+
+Used:
+
+* Responsive Tailwind grids
 * Flexible image sizing
+* Responsive typography
+* Stacked mobile layouts
+* Breakpoint-specific spacing
 
 ---
 
-## Challenge 3 — Organizing Large Amounts of Information
+## Challenge 5 — Keeping the Website Simple
 
-The website needed to communicate:
-
-* Farm information
-* Products
-* Quality
-* Certifications
-* Lab reports
-* Processes
-* Logistics
-
-Putting everything into paragraphs would make the website difficult to use.
+There was a tendency for industrial design to become visually heavy.
 
 ### Solution
 
-Information was divided into:
+The design was intentionally simplified.
 
-* Cards
-* Timelines
-* Statistics
-* Short descriptions
-* Visual sections
+The final principle became:
+
+> **Let the products and information create the visual hierarchy instead of excessive decoration.**
 
 ---
 
-## Challenge 4 — Maintaining Design Consistency
+# 32. Final Result
 
-Different sections could easily start looking unrelated.
-
-### Solution
-
-Used a consistent design system:
-
-**Colors + Typography + Spacing + Components + Border Radius + Imagery**
-
----
-
-# 24. Final Result
-
-The final Chintaman Farms frontend was designed as a modern agricultural brand website rather than a simple informational website.
+The AccurTool redesign transformed the website from a traditional industrial/product website direction into a cleaner and more modern B2B experience.
 
 The redesign focused on:
 
-> **Brand → Story → Trust → Products → Quality → Process → Delivery → Contact**
+> **Brand → Categories → Products → Technical Information → Trust → Enquiry**
 
-The result is a cleaner, more professional and responsive frontend experience that better represents the identity of Chintaman Farms.
+The final direction emphasized:
+
+* Clean design
+* Product visibility
+* Better navigation
+* Structured product information
+* Responsive layouts
+* Reusable components
+* Professional industrial presentation
 
 ---
 
-# 25. Key Learning
+# 33. Key Learning
 
-The project taught me that frontend development involves more than writing code.
+The AccurTool project taught me that building a product-focused website requires both **frontend engineering and information organization**.
 
-The complete process was:
+The development process was:
 
 ```text
-Understand Business
+Study Existing Website
         ↓
-Understand User
+Understand Products
         ↓
-Plan Information Architecture
+Identify UI Problems
         ↓
 Create Design Direction
         ↓
+Iterate on Visual Style
+        ↓
 Build Components
         ↓
-Implement UI
+Structure Product Data
         ↓
-Make Responsive
+Integrate Assets
+        ↓
+Implement Responsive Layout
         ↓
 Test
-        ↓
-Find Problems
         ↓
 Debug
         ↓
@@ -1149,6 +1218,80 @@ Improve
 Finalize
 ```
 
-The most important learning was:
+The most important lesson was:
 
-> **A good frontend should solve a business and user problem, not just look visually attractive.**
+> **A good industrial website should make it easy for the user to find, understand and enquire about the right product.**
+
+---
+
+# 34. Project Summary
+
+| Area                 | AccurTool Work                           |
+| -------------------- | ---------------------------------------- |
+| Project Type         | Industrial / Product Website             |
+| Primary Role         | Frontend Development + UI/UX             |
+| Framework            | React / Next.js                          |
+| Styling              | Tailwind CSS                             |
+| Development          | Vite                                     |
+| Main Focus           | Product presentation                     |
+| Major Page           | Clamp                                    |
+| Product Architecture | Structured product data                  |
+| UI Architecture      | Reusable components                      |
+| Theme Evolution      | Dark → Simplified → White                |
+| Responsive           | Desktop, Tablet, Mobile                  |
+| Main Challenge       | Product organization + UI simplification |
+| Main Learning        | Product-focused frontend architecture    |
+
+---
+
+# 35. Final Understanding
+
+The AccurTool project was not only a visual redesign.
+
+It involved:
+
+**Existing Website Analysis**
+
+↓
+
+**Business & Product Understanding**
+
+↓
+
+**Design Exploration**
+
+↓
+
+**Theme Iteration**
+
+↓
+
+**Component Development**
+
+↓
+
+**Product Data Organization**
+
+↓
+
+**Asset Integration**
+
+↓
+
+**Responsive Development**
+
+↓
+
+**Debugging**
+
+↓
+
+**UI Refinement**
+
+↓
+
+**Final Product-Focused Experience**
+
+The final objective was to create a website where the user can quickly understand:
+
+> **Who AccurTool is → What products they offer → What each product does → How to get more information or contact the company.**
